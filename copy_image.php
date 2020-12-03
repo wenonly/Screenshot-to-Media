@@ -23,10 +23,20 @@ function iwowen_copy() {
                     }
                 }
             }
+            if (!file) return
             try {
+                // 文章编辑页面
+                // 如果窗口是打开状态
+                if (wp.media.frame.modal.$el.is(':visible')) {
+                    wp.media.frame.uploader.uploader.uploader.addFile(file)
+                }
+            } catch (error) {}
+            try {
+                // 媒体新增页面
                 uploader.addFile(file)
             } catch (error) {}
             try {
+                // 媒体列表页面
                 wp.media.frames.browse.uploader.uploader.uploader.addFile(file)
             } catch (error) {}
             // 此时file就是剪切板中的图片文件
@@ -35,5 +45,5 @@ function iwowen_copy() {
     <?php
 };
 
-add_action('in_admin_footer','iwowen_copy');
+add_action('admin_footer','iwowen_copy');
 
