@@ -4,7 +4,7 @@ Plugin Name: screenshot to media
 Plugin URI: http://wordpress.org/plugins/screenshot-to-media/
 Description: Paste the screenshot to the media library（将截图粘贴到媒体库）
 Author: iwowen
-Version: 1.7.2
+Version: 1.0.0
 Author URI: https://www.iwowen.cn/
 */
 
